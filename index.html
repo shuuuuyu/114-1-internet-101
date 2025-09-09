@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林書妤 - 個人網站</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        /* 導航欄 */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: #fff;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero 區域 */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #fff, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 浮動粒子效果 */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* 內容區域 */
+        .section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        /* 關於我區域 */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .profile-image {
+            text-align: center;
+        }
+
+        .profile-image img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #667eea;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        .about-text h3 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* 技能區域 */
+        .skills {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-card h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        /* 聯繫區域 */
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .contact-content {
+            text-align: center;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .contact-item i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* 頁尾 */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* 動畫 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 導航欄 -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">林書妤</a>
+            <ul class="nav-links">
+                <li><a href="#home">首頁</a></li>
+                <li><a href="#about">關於我</a></li>
+                <li><a href="#skills">技能</a></li>
+                <li><a href="#contact">聯繫</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero 區域 -->
+    <section id="home" class="hero">
+        <div class="particles"></div>
+        <div class="hero-content">
+            <h1>林書妤</h1>
+            <p class="subtitle">前端工程師 | 設計愛好者 | 創意實踐者</p>
+            <a href="#about" class="cta-button">了解更多</a>
+        </div>
+    </section>
+
+    <!-- 關於我 -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">關於我</h2>
+            <div class="about-content">
+                <div class="profile-image">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=250&h=250&fit=crop&crop=face" alt="個人照片">
+                </div>
+                <div class="about-text">
+                    <h3>你好，我是林書妤！</h3>
+                    <p>我是一名充滿熱情的前端工程師，擁有超過3年的網頁開發經驗。專精於現代網頁技術，致力於創造優雅而實用的用戶介面。</p>
+                    <br>
+                    <p>我相信技術應該服務於人，因此在每個項目中都會考慮用戶體驗和設計美學。當不在編程時，我喜歡攝影、閱讀科技書籍，以及探索新的創意工具。</p>
+                    <br>
+                    <p>我的目標是持續學習新技術，並與團隊合作創造出色的數位體驗。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能 -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">我的技能</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>前端開發</h3>
+                    <p>HTML5, CSS3, JavaScript, React, Vue.js 等現代前端技術，打造響應式和互動式網站</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>UI/UX 設計</h3>
+                    <p>Figma, Adobe XD, 用戶體驗設計，創造美觀且易用的介面設計</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h3>效能優化</h3>
+                    <p>網站效能優化、SEO、無障礙設計，確保最佳的使用者體驗</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔧</div>
+                    <h3>開發工具</h3>
+                    <p>Git, Webpack, Node.js, 熟悉現代開發工作流程和版本控制</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯繫 -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">聯繫我</h2>
+            <div class="contact-content">
+                <p>有任何合作機會或想法，歡迎與我聯繫！</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i>📧</i>
+                        <h3>電子郵件</h3>
+                        <p>ming.zhang@email.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i>💼</i>
+                        <h3>LinkedIn</h3>
+                        <p>linkedin.com/in/mingzhang</p>
+                    </div>
+                    <div class="contact-item">
+                        <i>🐱</i>
+                        <h3>GitHub</h3>
+                        <p>github.com/mingzhang</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 林書妤。版權所有。</p>
+        </div>
+    </footer>
+
+    <script>
+        // 導航欄滾動效果
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // 平滑滾動
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 創建浮動粒子
+        function createParticles() {
+            const particlesContainer = document.querySelector('.particles');
+            const particleCount = 20;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                const size = Math.random() * 5 + 2;
+                const left = Math.random() * 100;
+                const animationDelay = Math.random() * 6;
+                const animationDuration = Math.random() * 3 + 3;
+                
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${left}%;
+                    top: ${Math.random() * 100}%;
+                    animation-delay: ${animationDelay}s;
+                    animation-duration: ${animationDuration}s;
+                `;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // 頁面載入時創建粒子
+        window.addEventListener('load', createParticles);
+
+        // 滾動動畫
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 為所有區塊添加觀察
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'all 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
