@@ -12,9 +12,9 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1d4ed8 100%);
-            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
+            color: #1e293b;
             overflow-x: hidden;
         }
 
@@ -30,107 +30,47 @@
             left: 0;
             right: 0;
             height: 80px;
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
             z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
         }
 
         .navigation {
             display: flex;
-            gap: 30px;
+            gap: 35px;
         }
 
         .nav-item {
-            padding: 12px 25px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 25px;
+            padding: 14px 28px;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 30px;
             text-decoration: none;
-            color: #ffffff;
-            font-weight: 500;
+            color: #1e40af;
+            font-weight: 600;
             letter-spacing: 0.5px;
             transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            font-size: 0.95rem;
         }
 
         .nav-item:hover, .nav-item.active {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-2px);
-            border-color: rgba(255, 255, 255, 0.3);
-            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
-        }
-
-        /* Profile Section in About */
-        .profile-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            margin-bottom: 60px;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 25px;
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
-        }
-
-        .profile-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #1e40af, #1d4ed8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 60px;
-            font-weight: bold;
-            color: white;
-            margin-bottom: 30px;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .profile-image:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.1);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .social-link {
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
+            background: #3b82f6;
             color: #ffffff;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .social-link:hover {
-            background: rgba(255, 255, 255, 0.2);
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+            border-color: #3b82f6;
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
         }
 
         /* Main Content */
         .main-content {
             width: 100%;
             min-height: 100vh;
-            padding-top: 80px; /* Account for top navigation */
+            padding-top: 80px;
         }
 
         .section {
@@ -142,79 +82,124 @@
         }
 
         .section-title {
-            font-size: 3rem;
+            font-size: 3.2rem;
             font-weight: 700;
-            margin-bottom: 40px;
-            background: linear-gradient(45deg, #ffffff, #bfdbfe);
+            margin-bottom: 50px;
+            background: linear-gradient(45deg, #1e40af, #3b82f6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+            text-shadow: 0 2px 15px rgba(59, 130, 246, 0.1);
         }
 
         /* About Me Section */
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
+            grid-template-columns: 320px 1fr;
+            gap: 70px;
+            align-items: start;
+            margin-bottom: 60px;
         }
 
-        .about-text {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: rgba(255, 255, 255, 0.9);
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 45px 35px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 25px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(59, 130, 246, 0.15);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .profile-image {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #3b82f6, #1e40af);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 70px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 30px;
+            border: 4px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(59, 130, 246, 0.3);
         }
 
         .about-details {
-            background: rgba(255, 255, 255, 0.12);
-            padding: 40px;
-            border-radius: 20px;
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.1);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 45px;
+            border-radius: 25px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(59, 130, 246, 0.15);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
         }
 
         .detail-item {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             display: flex;
             align-items: center;
+            font-size: 1.05rem;
         }
 
         .detail-label {
             font-weight: 600;
-            min-width: 100px;
-            color: #ffffff;
+            min-width: 110px;
+            color: #3b82f6;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 15px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 18px;
+            margin-top: 35px;
         }
 
         .skill-tag {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 12px 20px;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 14px 22px;
             border-radius: 25px;
             text-align: center;
-            font-weight: 500;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 600;
+            border: 1px solid rgba(59, 130, 246, 0.2);
             transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            font-size: 0.95rem;
+            color: #1e40af;
         }
 
         .skill-tag:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+            background: #3b82f6;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+        }
+
+        .about-text {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: rgba(30, 41, 59, 0.8);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 45px;
+            border-radius: 25px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(59, 130, 246, 0.15);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
         }
 
         /* Experience Section */
         .experience-timeline {
             position: relative;
-            padding-left: 30px;
+            padding-left: 35px;
         }
 
         .experience-timeline::before {
@@ -223,168 +208,208 @@
             left: 0;
             top: 0;
             bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, #4a90e2, #7b68ee);
+            width: 3px;
+            background: linear-gradient(to bottom, #3b82f6, #1e40af);
+            border-radius: 2px;
         }
 
         .experience-item {
             position: relative;
-            margin-bottom: 50px;
-            padding-left: 50px;
+            margin-bottom: 55px;
+            padding-left: 55px;
         }
 
         .experience-item::before {
             content: '';
             position: absolute;
-            left: -8px;
-            top: 10px;
-            width: 16px;
-            height: 16px;
-            background: #4a90e2;
+            left: -10px;
+            top: 12px;
+            width: 20px;
+            height: 20px;
+            background: #3b82f6;
             border-radius: 50%;
-            border: 3px solid rgba(13, 27, 42, 0.95);
+            border: 4px solid rgba(30, 64, 175, 0.95);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
         }
 
         .experience-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 35px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(59, 130, 246, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
 
         .experience-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #4a90e2;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+            color: #1e40af;
         }
 
         /* Portfolio Section */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 45px;
         }
 
         .portfolio-item {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 25px;
             overflow: hidden;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(59, 130, 246, 0.15);
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
 
         .portfolio-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            border-color: rgba(59, 130, 246, 0.3);
         }
 
         .portfolio-image {
             width: 100%;
-            height: 250px;
-            background: linear-gradient(45deg, #4a90e2, #7b68ee);
+            height: 260px;
+            background: linear-gradient(45deg, #3b82f6, #1e40af);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            color: white;
+            font-size: 3.5rem;
+            color: #ffffff;
         }
 
         .portfolio-content {
-            padding: 30px;
+            padding: 35px;
         }
 
         .portfolio-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #4a90e2;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+            color: #1e40af;
         }
 
         .portfolio-description {
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.6;
-            margin-bottom: 20px;
+            color: rgba(30, 41, 59, 0.7);
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-size: 1.05rem;
         }
 
         .portfolio-link {
             display: inline-block;
-            padding: 12px 25px;
-            background: rgba(74, 144, 226, 0.3);
-            color: white;
+            padding: 14px 28px;
+            background: rgba(59, 130, 246, 0.1);
+            color: #1e40af;
             text-decoration: none;
             border-radius: 25px;
-            border: 1px solid rgba(74, 144, 226, 0.5);
+            border: 1px solid rgba(59, 130, 246, 0.2);
             transition: all 0.3s ease;
+            font-weight: 600;
         }
 
         .portfolio-link:hover {
-            background: rgba(74, 144, 226, 0.5);
+            background: #3b82f6;
+            color: #ffffff;
             transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
         }
 
         /* Activities Section */
         .activities-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
         }
 
         .activity-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 25px;
             overflow: hidden;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(59, 130, 246, 0.15);
             transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
 
         .activity-card:hover {
             transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
         .activity-image {
             width: 100%;
-            height: 200px;
-            background: linear-gradient(45deg, #7b68ee, #4a90e2);
+            height: 220px;
+            background: linear-gradient(45deg, #3b82f6, #1e40af);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1.2rem;
+            color: #ffffff;
+            font-size: 1.3rem;
         }
 
         .activity-content {
-            padding: 20px;
+            padding: 25px;
         }
 
         .activity-title {
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1e40af;
+            font-size: 1.2rem;
+        }
+
+        /* GitHub Link Styling */
+        .github-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 18px 35px;
+            background: rgba(59, 130, 246, 0.1);
+            color: #1e40af;
+            text-decoration: none;
+            border-radius: 30px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
             font-weight: 600;
-            margin-bottom: 10px;
-            color: #4a90e2;
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+        }
+
+        .github-link:hover {
+            background: #3b82f6;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+
+        .github-link svg {
+            margin-right: 12px;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .navigation {
                 flex-wrap: wrap;
-                gap: 15px;
+                gap: 18px;
+                padding: 0 20px;
             }
             
             .nav-item {
-                padding: 10px 20px;
+                padding: 12px 22px;
                 font-size: 0.9rem;
             }
             
             .section {
-                padding: 40px 30px;
+                padding: 50px 35px;
             }
             
             .about-content {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 40px;
             }
             
             .portfolio-grid {
@@ -392,21 +417,25 @@
             }
 
             .profile-image {
-                width: 150px;
-                height: 150px;
-                font-size: 48px;
+                width: 180px;
+                height: 180px;
+                font-size: 55px;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
             }
         }
 
         @media (max-width: 480px) {
             .top-nav {
                 height: auto;
-                padding: 15px 20px;
+                padding: 20px;
             }
             
             .navigation {
                 flex-direction: column;
-                gap: 10px;
+                gap: 12px;
                 width: 100%;
             }
             
@@ -416,22 +445,21 @@
             }
             
             .main-content {
-                padding-top: 140px;
+                padding-top: 160px;
             }
 
             .profile-image {
-                width: 120px;
-                height: 120px;
-                font-size: 36px;
+                width: 140px;
+                height: 140px;
+                font-size: 42px;
             }
 
-            .social-links {
-                gap: 15px;
+            .section-title {
+                font-size: 2.2rem;
             }
 
-            .social-link {
-                width: 45px;
-                height: 45px;
+            .section {
+                padding: 40px 25px;
             }
         }
     </style>
@@ -454,36 +482,12 @@
             <section id="about" class="section">
                 <h2 class="section-title">About Me</h2>
                 
-                <!-- Profile Section -->
-                <div class="profile-section">
-                    <div class="profile-image">
-                        <!-- Placeholder for profile picture from pics folder -->
-                        AL
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/shu-yu-designer/" target="_blank" class="social-link">
-                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.instagram.com/amy.lin_2005/" target="_blank" class="social-link">
-                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.facebook.com/profile.php?id=100025648613400" target="_blank" class="social-link">
-                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
                 <div class="about-content">
-                    <div class="about-text">
-                        <p>I have a strong interest in both technology and design, and I enjoy hands-on experimentation with new things, such as writing small programs or creating interactive works.</p>
-                        <p>I love reading, observing life, and organizing my thoughts, trying to express them in different ways.</p>
-                        <p>This website is primarily a place for me to practice and share my work. In the future, I may also post some small projects, notes, or learning experiences.</p>
+                    <!-- Profile Section -->
+                    <div class="profile-section">
+                        <div class="profile-image">
+                            AL
+                        </div>
                     </div>
                     
                     <div class="about-details">
@@ -496,27 +500,28 @@
                             <span>Taipei, Taiwan</span>
                         </div>
                         <div class="detail-item">
-                            <span class="detail-label">Age:</span>
-                            <span>20</span>
-                        </div>
-                        <div class="detail-item">
                             <span class="detail-label">Email:</span>
-                            <span>amy20051109@gmail.com</span>
+                            <span>sylam1046@gmail.com</span>
                         </div>
                         <div class="detail-item">
                             <span class="detail-label">Major:</span>
-                            <span>Double Major in Mechatronics</span>
+                            <span>Technology Application and Human Resource Development</span>
                         </div>
                         
-                        <h3 style="margin: 30px 0 20px 0; color: #4a90e2;">Skills</h3>
+                        <h3 style="margin: 35px 0 25px 0; color: #1e40af; font-size: 1.3rem;">Skills</h3>
                         <div class="skills-grid">
                             <div class="skill-tag">Python</div>
                             <div class="skill-tag">C</div>
-                            <div class="skill-tag">Woodworking</div>
-                            <div class="skill-tag">Metalworking</div>
+                            <div class="skill-tag">Metal Processing</div>
                             <div class="skill-tag">Electronics</div>
                         </div>
                     </div>
+                </div>
+
+                <div class="about-text">
+                    <p>I have a strong interest in both technology and design, and I enjoy hands-on experimentation with new things, such as writing small programs or creating interactive works.</p>
+                    <br>
+                    <p>This website is primarily a place for me to practice and share my work. In the future, I may also post some small projects, notes, or learning experiences.</p>
                 </div>
             </section>
 
@@ -527,24 +532,24 @@
                     <div class="experience-item">
                         <div class="experience-card">
                             <h3 class="experience-title">National Taiwan Normal University</h3>
-                            <p style="color: #4a90e2; margin-bottom: 15px;">Double Major Student - Mechatronics Engineering</p>
-                            <p style="color: rgba(255, 255, 255, 0.8);">Currently pursuing a comprehensive education in mechatronics, combining mechanical engineering, electronics, and computer science. Active in various technical projects and research initiatives.</p>
+                            <p style="color: #3b82f6; margin-bottom: 18px; font-size: 1.1rem; font-weight: 600;">Technology Application and Human Resource Development</p>
+                            <p style="color: rgba(30, 41, 59, 0.7); line-height: 1.7; font-size: 1.05rem;">Currently pursuing a comprehensive education in technology application and human resource development, combining technical knowledge with human-centered design approaches. Active in various technical projects and research initiatives.</p>
                         </div>
                     </div>
                     
                     <div class="experience-item">
                         <div class="experience-card">
                             <h3 class="experience-title">Programming & Development</h3>
-                            <p style="color: #4a90e2; margin-bottom: 15px;">Self-taught Developer</p>
-                            <p style="color: rgba(255, 255, 255, 0.8);">Developed proficiency in Python and C programming through personal projects and coursework. Created interactive applications, games, and automation systems using various frameworks and libraries.</p>
+                            <p style="color: #3b82f6; margin-bottom: 18px; font-size: 1.1rem; font-weight: 600;">Self-taught Developer</p>
+                            <p style="color: rgba(30, 41, 59, 0.7); line-height: 1.7; font-size: 1.05rem;">Developed proficiency in Python and C programming through personal projects and coursework. Created interactive applications, games, and automation systems using various frameworks and libraries.</p>
                         </div>
                     </div>
                     
                     <div class="experience-item">
                         <div class="experience-card">
                             <h3 class="experience-title">Hands-on Engineering</h3>
-                            <p style="color: #4a90e2; margin-bottom: 15px;">Craftsmanship & Electronics</p>
-                            <p style="color: rgba(255, 255, 255, 0.8);">Gained practical experience in woodworking, metalworking, and electronic circuit design. Combining traditional craftsmanship with modern technology to create innovative solutions.</p>
+                            <p style="color: #3b82f6; margin-bottom: 18px; font-size: 1.1rem; font-weight: 600;">Craftsmanship & Electronics</p>
+                            <p style="color: rgba(30, 41, 59, 0.7); line-height: 1.7; font-size: 1.05rem;">Gained practical experience in metal processing and electronic circuit design. Combining traditional craftsmanship with modern technology to create innovative solutions.</p>Gained practical experience in metal processing and electronic circuit design. Combining traditional craftsmanship with modern technology to create innovative solutions.</p>
                         </div>
                     </div>
                 </div>
@@ -553,14 +558,13 @@
             <!-- Portfolio Section -->
             <section id="portfolio" class="section">
                 <h2 class="section-title">Portfolio</h2>
-                <div style="margin-bottom: 40px;">
-                    <a href="#" class="portfolio-link" style="font-size: 1.1rem; padding: 15px 30px;">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; vertical-align: middle;">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        Visit My GitHub
-                    </a>
-                </div>
+                
+                <a href="https://github.com/shuuuuyu" target="_blank" class="github-link">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Visit My GitHub
+                </a>
                 
                 <div class="portfolio-grid">
                     <div class="portfolio-item">
@@ -573,7 +577,7 @@
                     </div>
                     
                     <div class="portfolio-item">
-                        <div class="portfolio-image">🍎</div>
+                        <div class="portfolio-image">🎯</div>
                         <div class="portfolio-content">
                             <h3 class="portfolio-title">Food Hunter</h3>
                             <p class="portfolio-description">A Scratch-based game where players catch falling food items to obtain daily nutritional requirements, combining entertainment with health education.</p>
@@ -615,18 +619,10 @@
                 <h2 class="section-title">Extracurricular Activities</h2>
                 <div class="activities-gallery">
                     <div class="activity-card">
-                        <div class="activity-image">🏐</div>
-                        <div class="activity-content">
-                            <h3 class="activity-title">Department Volleyball Team</h3>
-                            <p style="color: rgba(255, 255, 255, 0.8);">Active participation in departmental sports activities, building teamwork and leadership skills through competitive volleyball.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="activity-card">
                         <div class="activity-image">🏢</div>
                         <div class="activity-content">
                             <h3 class="activity-title">Corporate Visit - Systex</h3>
-                            <p style="color: rgba(255, 255, 255, 0.8);">Participated in enterprise visits to gain insights into industry practices and career opportunities in technology companies.</p>
+                            <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">Participated in enterprise visits to gain insights into industry practices and career opportunities in technology companies.</p>
                         </div>
                     </div>
                     
@@ -634,15 +630,7 @@
                         <div class="activity-image">🚗</div>
                         <div class="activity-content">
                             <h3 class="activity-title">Toyota Factory Tour</h3>
-                            <p style="color: rgba(255, 255, 255, 0.8);">Educational visit to Toyota manufacturing facilities to understand industrial engineering and production processes.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="activity-card">
-                        <div class="activity-image">🎨</div>
-                        <div class="activity-content">
-                            <h3 class="activity-title">Handicraft Society</h3>
-                            <p style="color: rgba(255, 255, 255, 0.8);">Member of handicraft society, developing creative skills and hands-on making abilities through various craft projects.</p>
+                            <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">Educational visit to Toyota manufacturing facilities to understand industrial engineering and production processes.</p>
                         </div>
                     </div>
                     
@@ -650,7 +638,7 @@
                         <div class="activity-image">📐</div>
                         <div class="activity-content">
                             <h3 class="activity-title">Basic Design Works</h3>
-                            <p style="color: rgba(255, 255, 255, 0.8);">Created various fundamental design projects, exploring principles of design thinking and visual communication.</p>
+                            <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">Created various fundamental design projects, exploring principles of design thinking and visual communication.</p>
                         </div>
                     </div>
                 </div>
@@ -675,4 +663,29 @@
             });
         }
 
-        // Update active nav item
+        // Update active nav item on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section');
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === '#' + current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
