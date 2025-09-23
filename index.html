@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>林書妤 - 個人網站</title>
+    <title>Amy Lin - Designer & Developer</title>
     <style>
         * {
             margin: 0;
@@ -12,506 +12,667 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1d4ed8 100%);
+            color: #ffffff;
             overflow-x: hidden;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        /* 導航欄 */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        nav.scrolled {
-            background: rgba(255, 255, 255, 0.9);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-links li {
-            margin-left: 2rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background: #fff;
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* Hero 區域 */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            padding: 2rem;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #fff, #ff6b6b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero .subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        /* 浮動粒子效果 */
-        .particles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .particle {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        /* 內容區域 */
-        .section {
-            padding: 5rem 0;
-            background: white;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            display: flex;
+            min-height: 100vh;
         }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #333;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-
-        /* 關於我區域 */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 3rem;
+        /* Top Navigation */
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(15px);
+            display: flex;
             align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .navigation {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-item {
+            padding: 12px 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 25px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Profile Section in About */
+        .profile-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 60px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 25px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
         }
 
         .profile-image {
-            text-align: center;
-        }
-
-        .profile-image img {
-            width: 250px;
-            height: 250px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #667eea;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            background: linear-gradient(45deg, #1e40af, #1d4ed8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 30px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
         }
 
-        .profile-image img:hover {
+        .profile-image:hover {
             transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.1);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #ffffff;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+        }
+
+        /* Main Content */
+        .main-content {
+            width: 100%;
+            min-height: 100vh;
+            padding-top: 80px; /* Account for top navigation */
+        }
+
+        .section {
+            padding: 80px 60px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            background: linear-gradient(45deg, #ffffff, #bfdbfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+        }
+
+        /* About Me Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
         }
 
         .about-text {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             line-height: 1.8;
-            color: #666;
+            color: rgba(255, 255, 255, 0.9);
         }
 
-        .about-text h3 {
-            color: #333;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+        .about-details {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.1);
         }
 
-        /* 技能區域 */
-        .skills {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        .detail-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            min-width: 100px;
+            color: #ffffff;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
         }
 
-        .skill-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .skill-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .skill-card h3 {
-            color: #333;
-            margin-bottom: 1rem;
-        }
-
-        /* 聯繫區域 */
-        .contact {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        .contact-content {
-            text-align: center;
-        }
-
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .contact-item {
+        .skill-tag {
             background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-align: center;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-tag:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #4a90e2, #7b68ee);
+        }
+
+        .experience-item {
+            position: relative;
+            margin-bottom: 50px;
+            padding-left: 50px;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 10px;
+            width: 16px;
+            height: 16px;
+            background: #4a90e2;
+            border-radius: 50%;
+            border: 3px solid rgba(13, 27, 42, 0.95);
+        }
+
+        .experience-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
             border-radius: 15px;
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .experience-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #4a90e2;
+        }
+
+        /* Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+        }
+
+        .portfolio-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
         }
 
-        .contact-item:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-5px);
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
-        .contact-item i {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        /* 頁尾 */
-        footer {
-            background: #333;
+        .portfolio-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(45deg, #4a90e2, #7b68ee);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
             color: white;
-            text-align: center;
-            padding: 2rem;
         }
 
-        /* 動畫 */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .portfolio-content {
+            padding: 30px;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
+        .portfolio-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #4a90e2;
         }
 
-        /* 響應式設計 */
+        .portfolio-description {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background: rgba(74, 144, 226, 0.3);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 1px solid rgba(74, 144, 226, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-link:hover {
+            background: rgba(74, 144, 226, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Activities Section */
+        .activities-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .activity-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .activity-card:hover {
+            transform: scale(1.05);
+        }
+
+        .activity-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #7b68ee, #4a90e2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .activity-content {
+            padding: 20px;
+        }
+
+        .activity-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #4a90e2;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; }
+            .navigation {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            
+            .nav-item {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .section {
+                padding: 40px 30px;
+            }
+            
             .about-content {
                 grid-template-columns: 1fr;
-                text-align: center;
+                gap: 30px;
             }
-            .contact-info {
+            
+            .portfolio-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+                font-size: 48px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top-nav {
+                height: auto;
+                padding: 15px 20px;
+            }
+            
+            .navigation {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+            
+            .nav-item {
+                text-align: center;
+                width: 100%;
+            }
+            
+            .main-content {
+                padding-top: 140px;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+                font-size: 36px;
+            }
+
+            .social-links {
+                gap: 15px;
+            }
+
+            .social-link {
+                width: 45px;
+                height: 45px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- 導航欄 -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">林書妤</a>
-            <ul class="nav-links">
-                <li><a href="#home">首頁</a></li>
-                <li><a href="#about">關於我</a></li>
-                <li><a href="#skills">技能</a></li>
-                <li><a href="#contact">聯繫</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero 區域 -->
-    <section id="home" class="hero">
-        <div class="particles"></div>
-        <div class="hero-content">
-            <h1>林書妤</h1>
-            <p class="subtitle">前端工程師 | 設計愛好者 | 創意實踐者</p>
-            <a href="#about" class="cta-button">了解更多</a>
-        </div>
-    </section>
-
-    <!-- 關於我 -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">關於我</h2>
-            <div class="about-content">
-                <div class="profile-image">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=250&h=250&fit=crop&crop=face" alt="個人照片">
-                </div>
-                <div class="about-text">
-                    <h3>你好，我是林書妤！</h3>
-                    <p>我是一名充滿熱情的前端工程師，擁有超過3年的網頁開發經驗。專精於現代網頁技術，致力於創造優雅而實用的用戶介面。</p>
-                    <br>
-                    <p>我相信技術應該服務於人，因此在每個項目中都會考慮用戶體驗和設計美學。當不在編程時，我喜歡攝影、閱讀科技書籍，以及探索新的創意工具。</p>
-                    <br>
-                    <p>我的目標是持續學習新技術，並與團隊合作創造出色的數位體驗。</p>
-                </div>
+    <div class="container">
+        <!-- Top Navigation -->
+        <nav class="top-nav">
+            <div class="navigation">
+                <a href="#about" class="nav-item active" onclick="scrollToSection('about', this)">About Me</a>
+                <a href="#experience" class="nav-item" onclick="scrollToSection('experience', this)">Experience</a>
+                <a href="#portfolio" class="nav-item" onclick="scrollToSection('portfolio', this)">Portfolio</a>
+                <a href="#activities" class="nav-item" onclick="scrollToSection('activities', this)">Extracurricular Activities</a>
             </div>
-        </div>
-    </section>
+        </nav>
 
-    <!-- 技能 -->
-    <section id="skills" class="section skills">
-        <div class="container">
-            <h2 class="section-title">我的技能</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">💻</div>
-                    <h3>前端開發</h3>
-                    <p>HTML5, CSS3, JavaScript, React, Vue.js 等現代前端技術，打造響應式和互動式網站</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🎨</div>
-                    <h3>UI/UX 設計</h3>
-                    <p>Figma, Adobe XD, 用戶體驗設計，創造美觀且易用的介面設計</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">⚡</div>
-                    <h3>效能優化</h3>
-                    <p>網站效能優化、SEO、無障礙設計，確保最佳的使用者體驗</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🔧</div>
-                    <h3>開發工具</h3>
-                    <p>Git, Webpack, Node.js, 熟悉現代開發工作流程和版本控制</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 聯繫 -->
-    <section id="contact" class="section contact">
-        <div class="container">
-            <h2 class="section-title">聯繫我</h2>
-            <div class="contact-content">
-                <p>有任何合作機會或想法，歡迎與我聯繫！</p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i>📧</i>
-                        <h3>電子郵件</h3>
-                        <p>ming.zhang@email.com</p>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- About Me Section -->
+            <section id="about" class="section">
+                <h2 class="section-title">About Me</h2>
+                
+                <!-- Profile Section -->
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <!-- Placeholder for profile picture from pics folder -->
+                        AL
                     </div>
-                    <div class="contact-item">
-                        <i>💼</i>
-                        <h3>LinkedIn</h3>
-                        <p>linkedin.com/in/mingzhang</p>
-                    </div>
-                    <div class="contact-item">
-                        <i>🐱</i>
-                        <h3>GitHub</h3>
-                        <p>github.com/mingzhang</p>
+                    
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/shu-yu-designer/" target="_blank" class="social-link">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/amy.lin_2005/" target="_blank" class="social-link">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100025648613400" target="_blank" class="social-link">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I have a strong interest in both technology and design, and I enjoy hands-on experimentation with new things, such as writing small programs or creating interactive works.</p>
+                        <p>I love reading, observing life, and organizing my thoughts, trying to express them in different ways.</p>
+                        <p>This website is primarily a place for me to practice and share my work. In the future, I may also post some small projects, notes, or learning experiences.</p>
+                    </div>
+                    
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <span class="detail-label">School:</span>
+                            <span>National Taiwan Normal University</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">City:</span>
+                            <span>Taipei, Taiwan</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Age:</span>
+                            <span>20</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Email:</span>
+                            <span>amy20051109@gmail.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Major:</span>
+                            <span>Double Major in Mechatronics</span>
+                        </div>
+                        
+                        <h3 style="margin: 30px 0 20px 0; color: #4a90e2;">Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-tag">Python</div>
+                            <div class="skill-tag">C</div>
+                            <div class="skill-tag">Woodworking</div>
+                            <div class="skill-tag">Metalworking</div>
+                            <div class="skill-tag">Electronics</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <!-- 頁尾 -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 林書妤。版權所有。</p>
-        </div>
-    </footer>
+            <!-- Experience Section -->
+            <section id="experience" class="section">
+                <h2 class="section-title">Experience</h2>
+                <div class="experience-timeline">
+                    <div class="experience-item">
+                        <div class="experience-card">
+                            <h3 class="experience-title">National Taiwan Normal University</h3>
+                            <p style="color: #4a90e2; margin-bottom: 15px;">Double Major Student - Mechatronics Engineering</p>
+                            <p style="color: rgba(255, 255, 255, 0.8);">Currently pursuing a comprehensive education in mechatronics, combining mechanical engineering, electronics, and computer science. Active in various technical projects and research initiatives.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-card">
+                            <h3 class="experience-title">Programming & Development</h3>
+                            <p style="color: #4a90e2; margin-bottom: 15px;">Self-taught Developer</p>
+                            <p style="color: rgba(255, 255, 255, 0.8);">Developed proficiency in Python and C programming through personal projects and coursework. Created interactive applications, games, and automation systems using various frameworks and libraries.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-card">
+                            <h3 class="experience-title">Hands-on Engineering</h3>
+                            <p style="color: #4a90e2; margin-bottom: 15px;">Craftsmanship & Electronics</p>
+                            <p style="color: rgba(255, 255, 255, 0.8);">Gained practical experience in woodworking, metalworking, and electronic circuit design. Combining traditional craftsmanship with modern technology to create innovative solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portfolio Section -->
+            <section id="portfolio" class="section">
+                <h2 class="section-title">Portfolio</h2>
+                <div style="margin-bottom: 40px;">
+                    <a href="#" class="portfolio-link" style="font-size: 1.1rem; padding: 15px 30px;">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; vertical-align: middle;">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        Visit My GitHub
+                    </a>
+                </div>
+                
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">🎮</div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">The Advancing Apprentice</h3>
+                            <p class="portfolio-description">A Processing-based educational game that allows users to defeat academic monsters and explore careers through a question-and-answer system for academic preference allocation.</p>
+                            <a href="#" class="portfolio-link">View Project</a>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">🍎</div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Food Hunter</h3>
+                            <p class="portfolio-description">A Scratch-based game where players catch falling food items to obtain daily nutritional requirements, combining entertainment with health education.</p>
+                            <a href="#" class="portfolio-link">View Project</a>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">🌡️</div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Smart Irrigation System</h3>
+                            <p class="portfolio-description">An Arduino-based electronic circuit that automatically sprays water mist based on temperature readings and sends notifications to mobile devices via Telegram.</p>
+                            <a href="#" class="portfolio-link">View Project</a>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">🥘</div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Smart Fridge Manager</h3>
+                            <p class="portfolio-description">A Gradio + Python application that helps manage refrigerator ingredients and suggests daily meal plans based on available food items.</p>
+                            <a href="#" class="portfolio-link">View Project</a>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">🔮</div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">AI Fortune Teller</h3>
+                            <p class="portfolio-description">A Gradio + Python application that integrates Groq API for fortune telling, featuring Chain of Thought (CoT) and RAG (Retrieval-Augmented Generation) technologies.</p>
+                            <a href="#" class="portfolio-link">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Extracurricular Activities Section -->
+            <section id="activities" class="section">
+                <h2 class="section-title">Extracurricular Activities</h2>
+                <div class="activities-gallery">
+                    <div class="activity-card">
+                        <div class="activity-image">🏐</div>
+                        <div class="activity-content">
+                            <h3 class="activity-title">Department Volleyball Team</h3>
+                            <p style="color: rgba(255, 255, 255, 0.8);">Active participation in departmental sports activities, building teamwork and leadership skills through competitive volleyball.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-image">🏢</div>
+                        <div class="activity-content">
+                            <h3 class="activity-title">Corporate Visit - Systex</h3>
+                            <p style="color: rgba(255, 255, 255, 0.8);">Participated in enterprise visits to gain insights into industry practices and career opportunities in technology companies.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-image">🚗</div>
+                        <div class="activity-content">
+                            <h3 class="activity-title">Toyota Factory Tour</h3>
+                            <p style="color: rgba(255, 255, 255, 0.8);">Educational visit to Toyota manufacturing facilities to understand industrial engineering and production processes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-image">🎨</div>
+                        <div class="activity-content">
+                            <h3 class="activity-title">Handicraft Society</h3>
+                            <p style="color: rgba(255, 255, 255, 0.8);">Member of handicraft society, developing creative skills and hands-on making abilities through various craft projects.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-image">📐</div>
+                        <div class="activity-content">
+                            <h3 class="activity-title">Basic Design Works</h3>
+                            <p style="color: rgba(255, 255, 255, 0.8);">Created various fundamental design projects, exploring principles of design thinking and visual communication.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 
     <script>
-        // 導航欄滾動效果
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // 平滑滾動
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+        function scrollToSection(sectionId, element) {
+            // Remove active class from all nav items
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
             });
-        });
-
-        // 創建浮動粒子
-        function createParticles() {
-            const particlesContainer = document.querySelector('.particles');
-            const particleCount = 20;
-
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                
-                const size = Math.random() * 5 + 2;
-                const left = Math.random() * 100;
-                const animationDelay = Math.random() * 6;
-                const animationDuration = Math.random() * 3 + 3;
-                
-                particle.style.cssText = `
-                    width: ${size}px;
-                    height: ${size}px;
-                    left: ${left}%;
-                    top: ${Math.random() * 100}%;
-                    animation-delay: ${animationDelay}s;
-                    animation-duration: ${animationDuration}s;
-                `;
-                
-                particlesContainer.appendChild(particle);
-            }
+            
+            // Add active class to clicked item
+            element.classList.add('active');
+            
+            // Smooth scroll to section
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
 
-        // 頁面載入時創建粒子
-        window.addEventListener('load', createParticles);
-
-        // 滾動動畫
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // 為所有區塊添加觀察
-        document.querySelectorAll('.section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(20px)';
-            section.style.transition = 'all 0.6s ease';
-            observer.observe(section);
-        });
-    </script>
-</body>
-</html>
+        // Update active nav item
