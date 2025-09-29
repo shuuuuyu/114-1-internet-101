@@ -128,6 +128,13 @@
             border: 4px solid rgba(59, 130, 246, 0.2);
             transition: all 0.3s ease;
             box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+            overflow: hidden;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .profile-image:hover {
@@ -350,6 +357,13 @@
             justify-content: center;
             color: #ffffff;
             font-size: 1.3rem;
+            overflow: hidden;
+        }
+
+        .activity-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .activity-content {
@@ -486,7 +500,7 @@
                     <!-- Profile Section -->
                     <div class="profile-section">
                         <div class="profile-image">
-                            AL
+                            <img src="pics/profile.jpg" alt="Amy Lin" onerror="this.parentElement.innerHTML='AL'">
                         </div>
                     </div>
                     
@@ -549,7 +563,7 @@
                         <div class="experience-card">
                             <h3 class="experience-title">Hands-on Engineering</h3>
                             <p style="color: #3b82f6; margin-bottom: 18px; font-size: 1.1rem; font-weight: 600;">Craftsmanship & Electronics</p>
-                            <p style="color: rgba(30, 41, 59, 0.7); line-height: 1.7; font-size: 1.05rem;">Gained practical experience in metal processing and electronic circuit design. Combining traditional craftsmanship with modern technology to create innovative solutions.</p>Gained practical experience in metal processing and electronic circuit design. Combining traditional craftsmanship with modern technology to create innovative solutions.</p>
+                            <p style="color: rgba(30, 41, 59, 0.7); line-height: 1.7; font-size: 1.05rem;">Gained practical experience in metal processing and electronic circuit design. Combining traditional craftsmanship with modern technology to create innovative solutions.</p>
                         </div>
                     </div>
                 </div>
@@ -570,9 +584,10 @@
                     <div class="portfolio-item">
                         <div class="portfolio-image">🎮</div>
                         <div class="portfolio-content">
-                            <h3 class="portfolio-title">The Advancing Apprentice</h3>
+                            <h3 class="portfolio-title">Journey-of-Growth</h3>
                             <p class="portfolio-description">A Processing-based educational game that allows users to defeat academic monsters and explore careers through a question-and-answer system for academic preference allocation.</p>
-                            <a href="#" class="portfolio-link">View Project</a>
+                            <a href="https://github.com/jyx0615/Journey-of-Growth" target="_blank" class="portfolio-link" style="margin-right: 10px;">GitHub</a>
+                            <a href="https://demox.tw/idea/detail/?id=1945" target="_blank" class="portfolio-link">Exhibition</a>
                         </div>
                     </div>
                     
@@ -581,7 +596,7 @@
                         <div class="portfolio-content">
                             <h3 class="portfolio-title">Food Hunter</h3>
                             <p class="portfolio-description">A Scratch-based game where players catch falling food items to obtain daily nutritional requirements, combining entertainment with health education.</p>
-                            <a href="#" class="portfolio-link">View Project</a>
+                            <a href="https://demox.tw/curation/detail/?id=108" target="_blank" class="portfolio-link">Exhibition</a>
                         </div>
                     </div>
                     
@@ -590,7 +605,7 @@
                         <div class="portfolio-content">
                             <h3 class="portfolio-title">Smart Irrigation System</h3>
                             <p class="portfolio-description">An Arduino-based electronic circuit that automatically sprays water mist based on temperature readings and sends notifications to mobile devices via Telegram.</p>
-                            <a href="#" class="portfolio-link">View Project</a>
+                            <a href="https://github.com/shuuuuyu/Electronic-and-Electric-Circuits" target="_blank" class="portfolio-link">GitHub</a>
                         </div>
                     </div>
                     
@@ -599,7 +614,7 @@
                         <div class="portfolio-content">
                             <h3 class="portfolio-title">Smart Fridge Manager</h3>
                             <p class="portfolio-description">A Gradio + Python application that helps manage refrigerator ingredients and suggests daily meal plans based on available food items.</p>
-                            <a href="#" class="portfolio-link">View Project</a>
+                            <a href="https://github.com/shuuuuyu/113-3-DSCP" target="_blank" class="portfolio-link">GitHub</a>
                         </div>
                     </div>
                     
@@ -608,7 +623,7 @@
                         <div class="portfolio-content">
                             <h3 class="portfolio-title">AI Fortune Teller</h3>
                             <p class="portfolio-description">A Gradio + Python application that integrates Groq API for fortune telling, featuring Chain of Thought (CoT) and RAG (Retrieval-Augmented Generation) technologies.</p>
-                            <a href="#" class="portfolio-link">View Project</a>
+                            <a href="https://github.com/shuuuuyu/113-2-Generative-AI" target="_blank" class="portfolio-link">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -619,26 +634,32 @@
                 <h2 class="section-title">Extracurricular Activities</h2>
                 <div class="activities-gallery">
                     <div class="activity-card">
-                        <div class="activity-image">🏢</div>
+                        <div class="activity-image">
+                            <img src="pics/systex.jpg" alt="Systex Visit" onerror="this.parentElement.innerHTML='🏢'">
+                        </div>
                         <div class="activity-content">
                             <h3 class="activity-title">Corporate Visit - Systex</h3>
-                            <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">Participated in enterprise visits to gain insights into industry practices and career opportunities in technology companies.</p>
+                            <p style="color: rgba(30, 41, 59, 0.7); line-height: 1.6;">Participated in enterprise visits to gain insights into industry practices and career opportunities in technology companies.</p>
                         </div>
                     </div>
                     
                     <div class="activity-card">
-                        <div class="activity-image">🚗</div>
+                        <div class="activity-image">
+                            <img src="pics/toyota.jpg" alt="Toyota Factory" onerror="this.parentElement.innerHTML='🚗'">
+                        </div>
                         <div class="activity-content">
                             <h3 class="activity-title">Toyota Factory Tour</h3>
-                            <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">Educational visit to Toyota manufacturing facilities to understand industrial engineering and production processes.</p>
+                            <p style="color: rgba(30, 41, 59, 0.7); line-height: 1.6;">Educational visit to Toyota manufacturing facilities to understand industrial engineering and production processes.</p>
                         </div>
                     </div>
                     
                     <div class="activity-card">
-                        <div class="activity-image">📐</div>
+                        <div class="activity-image">
+                            <img src="pics/design-works.jpg" alt="Design Works" onerror="this.parentElement.innerHTML='📐'">
+                        </div>
                         <div class="activity-content">
                             <h3 class="activity-title">Basic Design Works</h3>
-                            <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">Created various fundamental design projects, exploring principles of design thinking and visual communication.</p>
+                            <p style="color: rgba(30, 41, 59, 0.7); line-height: 1.6;">Created various fundamental design projects, exploring principles of design thinking and visual communication.</p>
                         </div>
                     </div>
                 </div>
