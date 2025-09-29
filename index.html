@@ -74,8 +74,8 @@
         }
 
         .section {
-            padding: 80px 60px;
-            min-height: 100vh;
+            padding: 60px 60px;
+            min-height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -258,8 +258,8 @@
         /* Portfolio Section */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-            gap: 45px;
+            grid-template-columns: repeat(3, 1fr);            
+            gap: 35px;
         }
 
         .portfolio-item {
@@ -288,6 +288,12 @@
             font-size: 3.5rem;
             color: #ffffff;
         }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+}
 
         .portfolio-content {
             padding: 35px;
@@ -405,6 +411,16 @@
         }
 
         /* Responsive Design */
+
+        /* 平板尺寸：2 欄 (768px - 1200px) */
+        @media (max-width: 1200px) and (min-width: 769px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
+
+        /* 手機尺寸：1 欄 (< 768px) */
         @media (max-width: 768px) {
             .navigation {
                 flex-wrap: wrap;
@@ -427,7 +443,7 @@
             }
             
             .portfolio-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr;  /* 手機只顯示 1 欄 */
             }
 
             .profile-image {
@@ -441,6 +457,7 @@
             }
         }
 
+        /* 小手機尺寸 (< 480px) */
         @media (max-width: 480px) {
             .top-nav {
                 height: auto;
@@ -582,48 +599,67 @@
                 
                 <div class="portfolio-grid">
                     <div class="portfolio-item">
-                        <div class="portfolio-image">🎮</div>
+                        <div class="portfolio-image">
+                            <img src="pics/project-journey.png" alt="Journey-of-Growth" onerror="this.parentElement.innerHTML='🎮'">
+                        </div>
                         <div class="portfolio-content">
                             <h3 class="portfolio-title">Journey-of-Growth</h3>
                             <p class="portfolio-description">A Processing-based educational game that allows users to defeat academic monsters and explore careers through a question-and-answer system for academic preference allocation.</p>
                             <a href="https://github.com/jyx0615/Journey-of-Growth" target="_blank" class="portfolio-link" style="margin-right: 10px;">GitHub</a>
                             <a href="https://demox.tw/idea/detail/?id=1945" target="_blank" class="portfolio-link">Exhibition</a>
+                            <a href="https://youtu.be/yVHSTGoemms?si=SoAJlJ4lmOdSpGZT" target="_blank" class="portfolio-link" style="margin-right: 10px;">Demo Video</a>
+                            <a href="https://youtu.be/EH2KnQA_Un0?si=DduWo02en8XXHt42" target="_blank" class="portfolio-link">Report</a>
                         </div>
                     </div>
                     
                     <div class="portfolio-item">
-                        <div class="portfolio-image">🎯</div>
+                        <div class="portfolio-image">
+                            <img src="pics/project-food-hunter.png" alt="Food Hunter" onerror="this.parentElement.innerHTML='🎯'">
+                        </div>
                         <div class="portfolio-content">
                             <h3 class="portfolio-title">Food Hunter</h3>
                             <p class="portfolio-description">A Scratch-based game where players catch falling food items to obtain daily nutritional requirements, combining entertainment with health education.</p>
-                            <a href="https://demox.tw/curation/detail/?id=108" target="_blank" class="portfolio-link">Exhibition</a>
+                            <a href="https://demox.tw/idea/detail/?id=1794" target="_blank" class="portfolio-link">Exhibition</a>
+                            <a href="https://youtu.be/ZiB0wO_nFQQ?si=zHZqvw3GpwV3Jpxb" target="_blank" class="portfolio-link">Demo Video</a>
+
                         </div>
                     </div>
                     
                     <div class="portfolio-item">
-                        <div class="portfolio-image">🌡️</div>
+                        <div class="portfolio-image">
+                            <img src="pics/project-irrigation.png" alt="Smart Irrigation System" onerror="this.parentElement.innerHTML='🌡️'">
+                        </div>
                         <div class="portfolio-content">
                             <h3 class="portfolio-title">Smart Irrigation System</h3>
                             <p class="portfolio-description">An Arduino-based electronic circuit that automatically sprays water mist based on temperature readings and sends notifications to mobile devices via Telegram.</p>
                             <a href="https://github.com/shuuuuyu/Electronic-and-Electric-Circuits" target="_blank" class="portfolio-link">GitHub</a>
+                            <a href="https://youtu.be/bj-kWn5fJlQ?si=O-_2KlW30SXza7ZP" target="_blank" class="portfolio-link">Demo Video</a>
+
                         </div>
                     </div>
                     
                     <div class="portfolio-item">
-                        <div class="portfolio-image">🥘</div>
+                        <div class="portfolio-image">
+                            <img src="pics/project-fridge.png" alt="Smart Fridge Manager" onerror="this.parentElement.innerHTML='🥘'">
+                        </div>
                         <div class="portfolio-content">
                             <h3 class="portfolio-title">Smart Fridge Manager</h3>
                             <p class="portfolio-description">A Gradio + Python application that helps manage refrigerator ingredients and suggests daily meal plans based on available food items.</p>
                             <a href="https://github.com/shuuuuyu/113-3-DSCP" target="_blank" class="portfolio-link">GitHub</a>
+                            <a href="https://youtu.be/3NouwoXCoDE?si=CWS7cubMgvoM_Wa-" target="_blank" class="portfolio-link" style="margin-right: 10px;">Demo Video</a>
+                            <a href="https://youtu.be/Mq7CRGaWaIg?si=VN47v1rcn33hHxjL" target="_blank" class="portfolio-link">Report</a>
+
                         </div>
                     </div>
                     
                     <div class="portfolio-item">
-                        <div class="portfolio-image">🔮</div>
+                        <div class="portfolio-image">
+                            <img src="pics/project-fortune.png" alt="AI Fortune Teller" onerror="this.parentElement.innerHTML='🔮'">
+                        </div>
                         <div class="portfolio-content">
                             <h3 class="portfolio-title">AI Fortune Teller</h3>
                             <p class="portfolio-description">A Gradio + Python application that integrates Groq API for fortune telling, featuring Chain of Thought (CoT) and RAG (Retrieval-Augmented Generation) technologies.</p>
-                            <a href="https://github.com/shuuuuyu/113-2-Generative-AI" target="_blank" class="portfolio-link">GitHub</a>
+                            <a href="https://github.com/shuuuuyu/113-2-Generative-AI/blob/main/%E6%9C%9F%E6%9C%AB%E5%B0%88%E6%A1%88_%E9%8F%A1%E5%A1%94_%E5%A1%94%E7%BE%85%E5%8D%A0%E5%8D%9C%E4%BA%92%E5%8B%95%E7%A8%8B%E5%BC%8F.ipynb" target="_blank" class="portfolio-link">View Code</a>
                         </div>
                     </div>
                 </div>
