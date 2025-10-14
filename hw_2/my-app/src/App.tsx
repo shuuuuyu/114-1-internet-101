@@ -22,7 +22,7 @@ function App() {
         <span className="logo">
           <img src="/images/logo.svg" alt="" />
         </span>
-        <h1>Pecu's Dashboard</h1>
+        <h1>Taipei Dashboard</h1>
         <p>
           台北城市儀表板 + Gemini AI 整合<br />
           資料視覺化與人工智慧應用實作
@@ -46,7 +46,7 @@ function App() {
           <div className="spotlight">
             <div className="content">
               <header className="major">
-                <h2>Pecu's HomePage</h2>
+                <h2>HomePage</h2>
               </header>
               <p>
                 這是我的資料視覺化與 AI 整合專案。<br />
