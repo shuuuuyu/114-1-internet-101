@@ -11,4 +11,4 @@
     - [API 呼叫影片](https://youtu.be/RBsv4Pp5bF4)
     - 修改[app.tsx](hw_2/my-app/src/App.tsx)
     - 修改[server.cjs](hw_2/my-app/server.cjs)
-    - 因為我安裝的環境跟老師不太一樣，目前還在調AI串接的部分
+    - 因為我安裝的環境跟老師不太一樣，目前還在調AI串接的部分，等我做完會再重傳影片
