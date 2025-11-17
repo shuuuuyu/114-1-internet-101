@@ -11,3 +11,5 @@
     - [API 呼叫影片](https://youtu.be/m8NYgs95llw)
     - 修改[app.tsx]([hw_2/my-app/src/App.tsx](https://github.com/shuuuuyu/114-1-internet-101-hw2-TaipeiDashBoard/blob/main/src/App.tsx))排版
     - 修改[server.cjs](https://github.com/shuuuuyu/114-1-internet-101-hw2-TaipeiDashBoard/blob/main/server.cjs)) 因為我的環境跟老師的不太一樣
+  - 作業三：[個人網站串API](https://github.com/shuuuuyu/114-1-internet-101-hw3-mysite-api)
+  - 作業四：[作業三部署到vercel上](https://114-1-internet-101-hw3-mysite-api.vercel.app/)
