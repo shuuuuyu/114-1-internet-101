@@ -23,6 +23,7 @@
 ## 期末專題
 # 🏐 VolleyGo - 台灣排球資訊整合平台
 > **All Volleyball Info, One Simple Platform**
+> [專題連結](https://github.com/shuuuuyu/114-1-volleygo)https://github.com/shuuuuyu/114-1-volleygo
 
 ### ✅ 我們的解決方案
 打造整合雙聯賽、AI 智能、社群互動的一站式平台
