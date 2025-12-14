@@ -63,12 +63,15 @@
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/shuuuuyu/114-1-volleygo)
 
 </div>
+- **專題網站**: [https://one14-1-volleygo.onrender.com/](https://one14-1-volleygo.onrender.com/)
+- 🎬 **專題影片**: [YouTube 影片連結](https://youtu.be/JvZHsMg0NoM) or 複製連結 https://youtu.be/JvZHsMg0NoM
+- 🤖 **AI 後端**: [volleygo-api](https://github.com/shuuuuyu/114-1-volleygo-api)
+  - **後端部署網址**: [https://one14-1-volleygo-api.onrender.com/docs](https://one14-1-volleygo-api.onrender.com/docs)
+- 🕷️ **自動爬蟲**: [volleygo-crawler](https://github.com/shuuuuyu/114-1-volleygo-crawler)
 
+### 📖 專題簡介
 
-### 💡 專題目標
-
-打造整合**雙聯賽**、**AI 智能**、**社群互動**的一站式排球資訊平台
-
+VOLLEY GO 整合台灣職業排球聯盟 (TPVL) 與企業排球聯賽 (TVL) 的賽事資訊，結合 AI 智能助理、社群互動與自動化更新，為排球愛好者打造一站式資訊平台。
 
 ### ✨ 核心功能
 
