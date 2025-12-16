@@ -66,7 +66,7 @@
 
 - **專題網站**: [https://one14-1-volleygo.onrender.com/](https://one14-1-volleygo.onrender.com/)
 - **專題影片**: [https://youtu.be/JvZHsMg0NoM](https://youtu.be/JvZHsMg0NoM)
-- [(https://github.com/shuuuuyu/114-1-volleygo)](https://github.com/shuuuuyu/114-1-volleygo)
+- **github link**: [https://github.com/shuuuuyu/114-1-volleygo](https://github.com/shuuuuyu/114-1-volleygo)
 - 其他連結:
   -  [volleygo-api](https://github.com/shuuuuyu/114-1-volleygo-api)
   -  [https://one14-1-volleygo-api.onrender.com/docs](https://one14-1-volleygo-api.onrender.com/docs)
